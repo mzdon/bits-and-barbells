@@ -25,11 +25,15 @@
     padding: 0rem $default-font-size;
   }
 
-  .hero-title {
+  .hero-lead-in,
+  .hero-name,
+  .hero-lead-out {
+    text-align: left;
+  }
+
+  .hero-name {
     font-size: 5.6rem;
     font-weight: 700;
-    margin-bottom: 3.2rem;
-    text-align: left;
 
     @include respond(tab-land) {
       font-size: 4rem;
@@ -45,6 +49,10 @@
     @include respond(phone-xs) {
       font-size: 2.8rem;
     }
+  }
+
+  .hero-lead-out {
+    margin-bottom: 3.2rem;
   }
 
   .hero-cta {
