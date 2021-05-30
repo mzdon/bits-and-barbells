@@ -33,35 +33,36 @@ export const projectsData = [
     id: nanoid(),
     img: 'project.jpg',
     title: 'Bits & Barbells',
-    info: "Well, I put this site together. It wasn't a huge lift.. just a quick React app put together using Gatsby and a hacked up starter template!",
+    info: "Well, I put this site together. It wasn't a huge lift.. just a quick React app built with using Gatsby and a hacked up starter template!",
+    info2: '',
     url: 'https://bitsandbarbells.com',
     repo: 'https://github.com/mzdon/bits-and-barbells',
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
-    info: '',
+    title: 'Incentive: Financial Wellness',
+    info: "Incentive is the app I build at eMoney Advisor. It's a React Native app available on iOS and Android. I'm proud of what our team has put together.",
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://getincentive.com',
+    repo: '',
   },
   {
     id: nanoid(),
     img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
+    title: 'WodWatch',
+    info: "WodWatch is a fitness timer app designed for CrossFit. I never found a free timer app I liked so I've decided to build one myself. It's also built using React Native",
+    info2: 'Website and code repo links coming soon!',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: '',
   },
 ];
 
 // CONTACT DATA
 export const contactData = {
-  cta: '',
-  btn: '',
-  email: '',
+  cta: 'Get in touch.',
+  btn: 'Email Me',
+  email: 'marczdon@gmail.com',
 };
 
 // FOOTER DATA
@@ -69,28 +70,18 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'linkedin',
-      url: '',
+      name: 'github',
+      url: 'https://github.com/mzdon',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/mzdon-ema',
     },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
