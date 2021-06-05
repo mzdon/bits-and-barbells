@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import * as PropTypes from 'prop-types';
 import Hero from './Hero/Hero';
 import About from './About/About';
+import Blog from './Blog/BlogPreview';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
@@ -9,7 +11,7 @@ import { PortfolioProvider } from '../context/context';
 
 import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
 
-function App() {
+function App({ posts }) {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
@@ -25,14 +27,19 @@ function App() {
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
+    <PortfolioProvider value={{ hero, about, projects, contact, footer, posts }}>
       <Hero />
       <About />
+      <Blog />
       <Projects />
       <Contact />
       <Footer />
     </PortfolioProvider>
   );
 }
+
+App.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.any),
+};
 
 export default App;
