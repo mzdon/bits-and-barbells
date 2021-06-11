@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container } from 'react-bootstrap';
+import Fade from '../Fade/Fade';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 
@@ -12,7 +12,7 @@ const Contact = () => {
     <section id="contact">
       <Container>
         <Title title="Contact" />
-        <Fade bottom duration={1000} delay={800} distance="30px">
+        <Fade bottom delay={800}>
           <div className="contact-wrapper">
             <p className="contact-wrapper__text">{cta}</p>
             <a

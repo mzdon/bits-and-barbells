@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
+import Fade from '../Fade/Fade';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import useDeviceType from '../../utils/useDeviceType';
@@ -22,13 +22,7 @@ const BlogPreview = () => {
 
             return (
               <Row key={id}>
-                <Fade
-                  right={isDesktop}
-                  bottom={isMobile}
-                  duration={1000}
-                  delay={1000}
-                  distance="30px"
-                >
+                <Fade right={isDesktop} bottom={isMobile} delay={250}>
                   <div className="blog-preview-wrapper__image mb-4">
                     <div className="thumbnail rounded">
                       <GatsbyImage alt={title} image={img} />
@@ -39,13 +33,7 @@ const BlogPreview = () => {
                   </div>
                 </Fade>
                 <Col sm={12}>
-                  <Fade
-                    left={isDesktop}
-                    bottom={isMobile}
-                    duration={1000}
-                    delay={500}
-                    distance="30px"
-                  >
+                  <Fade left={isDesktop} bottom={isMobile} delay={300}>
                     <div className="blog-preview-wrapper__text">{renderRichText(body)}</div>
                   </Fade>
                 </Col>
