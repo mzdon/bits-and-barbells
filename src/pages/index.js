@@ -38,10 +38,13 @@ export const pageQuery = graphql`
         banner {
           gatsbyImageData(layout: FULL_WIDTH)
         }
+        preview {
+          raw
+        }
         body {
           raw
         }
-        createdAt
+        updatedAt
       }
     }
   }
