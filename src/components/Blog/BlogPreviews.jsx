@@ -18,7 +18,7 @@ const BlogPreviews = () => {
       <Container>
         <div className="blog-preview-wrapper">
           <Title title="Recent Posts" />
-          {posts.nodes.map((post) => {
+          {posts.map((post) => {
             const { id, title, banner, preview } = post;
             const img = getImage(banner);
             const postedDate = getPostedDate(post);
