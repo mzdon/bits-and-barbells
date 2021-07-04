@@ -56,6 +56,15 @@ export const projectsData = [
     url: '',
     repo: '',
   },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'MyMacros',
+    info: "MyMacros is a macronutrient tracking utility that is intended to be as simple as possible with a minimalistic design and feature set. I've used other apps to help track my macronutrient consumption but I found my experience frustrating or overcrowded with unnecessary features. I used React Native for this one as well.",
+    info2: 'Website and code repo links coming soon!',
+    url: '',
+    repo: '',
+  },
 ];
 
 // CONTACT DATA
