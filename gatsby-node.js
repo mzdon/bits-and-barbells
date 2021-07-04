@@ -61,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
         path: i === 0 ? `/blog` : `/blog&p=${page}`,
         component: blog,
         context: {
-          posts: nodes.splice(pIdx, pEnd),
+          posts: nodes.slice(pIdx, pEnd),
           limit: NUM_POSTS_PER_PAGE,
           skip: pIdx,
           numPages,
@@ -75,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
       path: '/',
       component: home,
       context: {
-        posts: nodes.splice(0, NUM_PREVIEW_POSTS),
+        posts: nodes.slice(0, NUM_PREVIEW_POSTS),
       },
     });
   });

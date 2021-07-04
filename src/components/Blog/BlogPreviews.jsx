@@ -1,16 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import * as PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
+import Post from '../../entities/Post';
 import Fade from '../Fade/Fade';
-import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import useDeviceType from '../../utils/useDeviceType';
 import { getPostedDate, getPostReadLength } from '../../utils/blogHelpers';
 
-const BlogPreviews = () => {
-  const { posts } = useContext(PortfolioContext);
+const BlogPreviews = ({ posts }) => {
   const { isDesktop, isMobile } = useDeviceType();
 
   return (
@@ -67,6 +66,10 @@ const BlogPreviews = () => {
       </Container>
     </section>
   );
+};
+
+BlogPreviews.propTypes = {
+  posts: PropTypes.arrayOf(Post),
 };
 
 export default BlogPreviews;

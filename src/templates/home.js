@@ -2,6 +2,7 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import App from '../components/App';
+import Post from '../entities/Post';
 import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
@@ -23,9 +24,9 @@ const Root = ({ pageContext: { posts } }) => {
 };
 
 Root.propTypes = {
-  pageContext: {
-    posts: PropTypes.arrayOf(PropTypes.any),
-  },
+  pageContext: PropTypes.shape({
+    posts: PropTypes.arrayOf(Post),
+  }),
 };
 
 export default Root;

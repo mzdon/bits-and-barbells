@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as PropTypes from 'prop-types';
 import Hero from './Hero/Hero';
 import About from './About/About';
-import Blog from './Blog/BlogPreviews';
+import BlogPreview from './Blog/BlogPreviews';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
@@ -27,10 +27,10 @@ function App({ posts }) {
   }, []);
 
   return (
-    <PortfolioProvider value={{ hero, about, projects, contact, footer, posts }}>
+    <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
-      <Blog />
+      <BlogPreview posts={posts} />
       <Projects />
       <Contact />
       <Footer />
