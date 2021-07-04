@@ -2,6 +2,7 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import App from '../components/App';
+import Header from '../components/Header/Header';
 import Post from '../entities/Post';
 import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +19,7 @@ const Root = ({ pageContext: { posts } }) => {
         <html lang={lang} />
         <meta name="description" content={description} />
       </Helmet>
+      <Header />
       <App posts={posts} />
     </>
   );

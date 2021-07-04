@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as PropTypes from 'prop-types';
 import Hero from './Hero/Hero';
 import About from './About/About';
-import BlogPreview from './Blog/BlogPreviews';
+import PreviewsSection from './Blog/PreviewsSection';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
@@ -30,7 +30,7 @@ function App({ posts }) {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
-      <BlogPreview posts={posts} />
+      <PreviewsSection posts={posts} />
       <Projects />
       <Contact />
       <Footer />
