@@ -27,30 +27,32 @@ const PostPreview = ({ post }) => {
   };
 
   return (
-    <Row key={id}>
-      <Col sm={12} md={{ span: 4, order: 'last' }}>
-        <Fade right={isDesktop} bottom={isMobile} delay={250}>
-          <PostLink className="blog-preview-wrapper__image">
-            <div className="thumbnail">
-              <GatsbyImage alt={title} image={img} />
-            </div>
-          </PostLink>
-        </Fade>
-      </Col>
-      <Col sm={12} md={8}>
-        <Fade left={isDesktop} bottom={isMobile} delay={200}>
-          <h2 className="blog-preview-wrapper__title">
-            <PostLink>{title}</PostLink>
-          </h2>
-        </Fade>
-        <Fade left={isDesktop} bottom={isMobile} delay={300}>
-          <PostLink className="blog-preview-wrapper__text">{renderRichText(preview)}</PostLink>
-          <PostLink className="blog-preview-wrapper__metadata">
-            <p>{`${postedDate} · ${readLength}`}</p>
-          </PostLink>
-        </Fade>
-      </Col>
-    </Row>
+    <section className="post-preview-wrapper">
+      <Row key={id}>
+        <Col sm={12} md={{ span: 4, order: 'last' }}>
+          <Fade right={isDesktop} bottom={isMobile} delay={250}>
+            <PostLink className="post-preview-wrapper__image">
+              <div className="thumbnail">
+                <GatsbyImage alt={title} image={img} />
+              </div>
+            </PostLink>
+          </Fade>
+        </Col>
+        <Col sm={12} md={8}>
+          <Fade left={isDesktop} bottom={isMobile} delay={200}>
+            <h2 className="post-preview-wrapper__title">
+              <PostLink>{title}</PostLink>
+            </h2>
+          </Fade>
+          <Fade left={isDesktop} bottom={isMobile} delay={300}>
+            <PostLink className="post-preview-wrapper__text">{renderRichText(preview)}</PostLink>
+            <PostLink className="post-preview-wrapper__metadata">
+              <p>{`${postedDate} · ${readLength}`}</p>
+            </PostLink>
+          </Fade>
+        </Col>
+      </Row>
+    </section>
   );
 };
 
