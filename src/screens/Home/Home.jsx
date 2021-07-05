@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import * as PropTypes from 'prop-types';
-import Hero from './Hero/Hero';
-import About from './About/About';
-import PreviewsSection from './Blog/PreviewsSection';
-import Projects from './Projects/Projects';
-import Contact from './Contact/Contact';
-import Footer from './Footer/Footer';
+import { PortfolioProvider } from 'context/context';
+import Post from 'entities/Post';
+import { heroData, aboutData, projectsData, contactData, footerData } from 'mock/data';
+import Footer from 'components/Footer';
+import RecentPosts from './components/RecentPosts';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
-import { PortfolioProvider } from '../context/context';
-
-import { heroData, aboutData, projectsData, contactData, footerData } from '../mock/data';
-
-function App({ posts }) {
+const Home = ({ posts }) => {
   const [hero, setHero] = useState({});
   const [about, setAbout] = useState({});
   const [projects, setProjects] = useState([]);
@@ -30,16 +29,16 @@ function App({ posts }) {
     <PortfolioProvider value={{ hero, about, projects, contact, footer }}>
       <Hero />
       <About />
-      <PreviewsSection posts={posts} />
+      <RecentPosts posts={posts} />
       <Projects />
       <Contact />
       <Footer />
     </PortfolioProvider>
   );
-}
-
-App.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.any),
 };
 
-export default App;
+Home.propTypes = {
+  posts: PropTypes.arrayOf(Post),
+};
+
+export default Home;

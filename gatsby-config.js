@@ -57,6 +57,25 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src',
+        aliases: {
+          components: './components',
+          context: './context',
+          entities: './entities',
+          files: './files',
+          images: './images',
+          mock: './mock',
+          pages: './pages',
+          screens: './screens',
+          style: './style',
+          templates: './templates',
+          utils: './utils',
+        },
+      },
+    },
     contentfulConfig,
   ],
 };

@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   extends: ['airbnb', 'prettier'],
   plugins: ['prettier'],
@@ -16,4 +18,11 @@ module.exports = {
     'react/require-default-props': 'off',
   },
   parser: 'babel-eslint',
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: [path.resolve(__dirname, 'src')],
+      },
+    },
+  },
 };

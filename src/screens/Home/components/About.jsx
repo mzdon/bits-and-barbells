@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Fade from '../Fade/Fade';
-import Title from '../Title/Title';
-import AboutImg from '../Image/AboutImg';
-import PortfolioContext from '../../context/context';
-import useDeviceType from '../../utils/useDeviceType';
+import Fade from 'components/Fade';
+import Title from 'components/Title';
+import AboutImg from 'components/Image/AboutImg';
+import PortfolioContext from 'context/context';
+import useDeviceType from 'utils/useDeviceType';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);

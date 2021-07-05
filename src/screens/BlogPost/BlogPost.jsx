@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
-import Fade from '../Fade/Fade';
-import PortfolioContext from '../../context/context';
-import useDeviceType from '../../utils/useDeviceType';
+import Fade from 'components/Fade';
+import Post from 'entities/Post';
+import useDeviceType from 'utils/useDeviceType';
 
-const BlogPost = () => {
-  const { post } = useContext(PortfolioContext);
+const BlogPost = ({ post }) => {
   const { isDesktop, isMobile } = useDeviceType();
 
   const { title, banner, body } = post;
@@ -34,6 +33,10 @@ const BlogPost = () => {
       </Container>
     </section>
   );
+};
+
+BlogPost.propTypes = {
+  post: Post,
 };
 
 export default BlogPost;

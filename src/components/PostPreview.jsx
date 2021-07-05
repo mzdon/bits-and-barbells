@@ -3,10 +3,10 @@ import * as PropTypes from 'prop-types';
 import { Row, Col } from 'react-bootstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
-import Post from '../../entities/Post';
-import Fade from '../Fade/Fade';
-import useDeviceType from '../../utils/useDeviceType';
-import { getPostedDate, getPostReadLength } from '../../utils/blogHelpers';
+import Post from 'entities/Post';
+import Fade from 'components/Fade';
+import useDeviceType from 'utils/useDeviceType';
+import { getPostedDate, getPostReadLength } from 'utils/blogHelpers';
 
 const PostPreview = ({ post }) => {
   const { isDesktop, isMobile } = useDeviceType();

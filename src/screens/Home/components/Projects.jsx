@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import Tilt from 'react-tilt';
 import { Container, Row, Col } from 'react-bootstrap';
-import Fade from '../Fade/Fade';
-import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
-import useDeviceType from '../../utils/useDeviceType';
+import Fade from 'components/Fade';
+import PortfolioContext from 'context/context';
+import Title from 'components/Title';
+import ProjectImg from 'components/Image/ProjectImg';
+import useDeviceType from 'utils/useDeviceType';
 
 const Projects = () => {
   const { projects } = useContext(PortfolioContext);

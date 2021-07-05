@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Fade from '../Fade/Fade';
+import Fade from 'components/Fade';
 
 const Title = ({ title }) => (
   <Fade bottom delay={300} distance="0px">

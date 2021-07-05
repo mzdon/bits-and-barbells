@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
-import Fade from '../Fade/Fade';
-import PortfolioContext from '../../context/context';
-import Title from '../Title/Title';
+import PortfolioContext from 'context/context';
+import Fade from 'components/Fade';
+import Title from 'components/Title';
 
 const Contact = () => {
   const { contact } = useContext(PortfolioContext);

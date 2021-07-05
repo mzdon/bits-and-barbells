@@ -1,34 +1,24 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-import { Helmet } from 'react-helmet';
-import App from '../components/App';
-import Header from '../components/Header/Header';
-import Post from '../entities/Post';
-import { headData } from '../mock/data';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../style/main.scss';
+import HomeScreen from 'screens/Home/Home';
+import Post from 'entities/Post';
+import { headData } from 'mock/data';
+import Root from './root';
 
-const Root = ({ pageContext: { posts } }) => {
-  const { title, lang, description } = headData;
+const Home = ({ pageContext: { posts } }) => {
+  const { title } = headData;
 
   return (
-    <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>{title}</title>
-        <html lang={lang} />
-        <meta name="description" content={description} />
-      </Helmet>
-      <Header />
-      <App posts={posts} />
-    </>
+    <Root title={title}>
+      <HomeScreen posts={posts} />
+    </Root>
   );
 };
 
-Root.propTypes = {
+Home.propTypes = {
   pageContext: PropTypes.shape({
     posts: PropTypes.arrayOf(Post),
   }),
 };
 
-export default Root;
+export default Home;

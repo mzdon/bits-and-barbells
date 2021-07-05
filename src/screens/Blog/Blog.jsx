@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import * as PropTypes from 'prop-types';
 import { Container } from 'react-bootstrap';
-import PostPreview from './Blog/PostPreview';
-import Footer from './Footer/Footer';
-import Title from './Title/Title';
-import { PortfolioProvider } from '../context/context';
-import { footerData } from '../mock/data';
+import PostPreview from 'components/PostPreview';
+import Footer from 'components/Footer';
+import Title from 'components/Title';
+import { PortfolioProvider } from 'context/context';
+import { footerData } from 'mock/data';
 
-function Blog({ posts }) {
+const Blog = ({ posts }) => {
   const [footer, setFooter] = useState({});
 
   useEffect(() => {
@@ -25,7 +25,7 @@ function Blog({ posts }) {
       <Footer />
     </PortfolioProvider>
   );
-}
+};
 
 Blog.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.any),
