@@ -16,12 +16,16 @@ const Blog = ({ posts }) => {
 
   return (
     <PortfolioProvider value={{ footer }}>
-      <Container>
-        <Title title="Information Station" />
-        {posts.map((post) => (
-          <PostPreview post={post} />
-        ))}
-      </Container>
+      <section id="blog">
+        <div className="blog-wrapper">
+          <Container>
+            <Title title="Information Station" />
+            {posts.map((post) => (
+              <PostPreview post={post} />
+            ))}
+          </Container>
+        </div>
+      </section>
       <Footer />
     </PortfolioProvider>
   );

@@ -1,4 +1,4 @@
-#post-preview {
+#recent-posts {
   background-color: $white-color;
   color: $dark-blue-text;
   margin-top: -10rem;
@@ -7,5 +7,9 @@
   @include respond(tab-land) {
     margin-top: 0;
     padding-top: 5rem;
+  }
+
+  .recent-posts-wrapper {
+    margin-bottom: 5rem;
   }
 }

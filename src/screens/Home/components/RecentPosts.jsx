@@ -6,9 +6,9 @@ import PostPreview from 'components/PostPreview';
 import Title from 'components/Title';
 
 const PreviewsSection = ({ posts }) => (
-  <section id="blog-preview">
+  <section id="recent-posts">
     <Container>
-      <div className="blog-preview-wrapper">
+      <div className="recent-posts-wrapper">
         <Title title="Recent Posts" />
         {posts.map((post) => (
           <PostPreview key={post.id} post={post} />

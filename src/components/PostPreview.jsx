@@ -27,7 +27,7 @@ const PostPreview = ({ post }) => {
   };
 
   return (
-    <section className="post-preview-wrapper">
+    <div className="post-preview-wrapper">
       <Row key={id}>
         <Col sm={12} md={{ span: 4, order: 'last' }}>
           <Fade right={isDesktop} bottom={isMobile} delay={250}>
@@ -52,7 +52,7 @@ const PostPreview = ({ post }) => {
           </Fade>
         </Col>
       </Row>
-    </section>
+    </div>
   );
 };
 

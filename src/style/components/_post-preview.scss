@@ -1,5 +1,5 @@
 .post-preview-wrapper {
-  margin-bottom: 15rem;
+  margin-bottom: 5rem;
 
   @include respond(phone) {
     margin-bottom: 0rem;
@@ -7,14 +7,6 @@
 
   & a {
     color: $dark-blue-text;
-  }
-
-  .row {
-    margin-bottom: 8rem;
-
-    @include respond(phone) {
-      margin-bottom: 4rem;
-    }
   }
 
   &__text {
