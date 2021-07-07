@@ -25,7 +25,7 @@ const Header = () => {
             {'.'}
           </h1>
         </Fade>
-        <Fade bottom delay={1300}>
+        <Fade bottom delay={1100}>
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
               <Link to="about" smooth duration={1000}>

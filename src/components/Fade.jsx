@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactFade from 'react-reveal/Fade';
 
-const FADE_DURATION = 750;
-const FADE_DISTANCE = '30px';
+const FADE_DURATION = 500;
+const FADE_DISTANCE = '10px';
 
 const Fade = ({ children, ...rest }) => {
   return (

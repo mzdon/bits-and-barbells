@@ -22,14 +22,11 @@ const Projects = () => {
             return (
               <Row key={id}>
                 <Col lg={4} sm={12}>
-                  <Fade left={isDesktop} bottom={isMobile} delay={500}>
+                  <Fade left={isDesktop} bottom={isMobile} delay={200}>
                     <div className="project-wrapper__text">
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                      <h3 className="project-wrapper__text-title">{title}</h3>
                       <div>
-                        <p>
-                          {info ||
-                            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
-                        </p>
+                        <p>{info}</p>
                         <p className="mb-4">{info2 || ''}</p>
                       </div>
                       <a
@@ -55,7 +52,7 @@ const Projects = () => {
                   </Fade>
                 </Col>
                 <Col lg={8} sm={12}>
-                  <Fade right={isDesktop} bottom={isMobile} delay={1000}>
+                  <Fade right={isDesktop} bottom={isMobile} delay={250}>
                     <div className="project-wrapper__image">
                       <a
                         href={url || '#!'}
