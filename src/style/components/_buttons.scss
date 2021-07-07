@@ -83,3 +83,34 @@
 .up i {
   color: #272727;
 }
+
+/* Pagination Buttons */
+.pagination-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+
+  a {
+    color: $primary-color;
+
+    &.number-button {
+      padding: 1em;
+      text-decoration: none;
+      color: $primary-color;
+
+      &.is-current {
+        color: $white-color;
+        background-color: $primary-color;
+      }
+    }
+
+    &.is-disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      color: $light-grey;
+    }
+  }
+}

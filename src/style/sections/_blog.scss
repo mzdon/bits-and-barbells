@@ -1,5 +1,16 @@
 #blog {
-  .blog-wrapper {
+  padding-top: 0;
+
+  .blog-header-wrapper {
+    @include purple-top-section;
+    padding-top: 5em;
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .blog-body-wrapper {
     min-height: 50vh;
   }
 }

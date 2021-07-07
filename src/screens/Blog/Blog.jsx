@@ -6,8 +6,9 @@ import Footer from 'components/Footer';
 import Title from 'components/Title';
 import { PortfolioProvider } from 'context/context';
 import { footerData } from 'mock/data';
+import PageButtons from './components/PageButtons';
 
-const Blog = ({ posts }) => {
+const Blog = ({ posts, currentPage, numPages }) => {
   const [footer, setFooter] = useState({});
 
   useEffect(() => {
@@ -17,14 +18,20 @@ const Blog = ({ posts }) => {
   return (
     <PortfolioProvider value={{ footer }}>
       <section id="blog">
-        <div className="blog-wrapper">
-          <Container>
-            <Title title="Information Station" />
+        <div className="blog-header-wrapper">
+          <Title title="Information Station" />
+        </div>
+        <Container>
+          <div className="blog-body-wrapper">
             {posts.map((post) => (
               <PostPreview post={post} />
             ))}
-          </Container>
-        </div>
+          </div>
+
+          <div className="blog-pagination-wrapper">
+            <PageButtons currentPage={currentPage} numPages={numPages} />
+          </div>
+        </Container>
       </section>
       <Footer />
     </PortfolioProvider>
@@ -33,6 +40,8 @@ const Blog = ({ posts }) => {
 
 Blog.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.any),
+  currentPage: PropTypes.number,
+  numPages: PropTypes.number,
 };
 
 export default Blog;
