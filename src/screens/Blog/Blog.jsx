@@ -24,7 +24,7 @@ const Blog = ({ posts, currentPage, numPages }) => {
         <Container>
           <div className="blog-body-wrapper">
             {posts.map((post) => (
-              <PostPreview post={post} />
+              <PostPreview post={post} key={post.id} />
             ))}
           </div>
 
