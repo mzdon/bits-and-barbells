@@ -17,7 +17,7 @@ const Blog = ({ posts, currentPage, numPages }) => {
 
   return (
     <PortfolioProvider value={{ footer }}>
-      <section id="blog">
+      <div id="blog">
         <div className="blog-header-wrapper">
           <Title title="Information Station" />
         </div>
@@ -32,7 +32,7 @@ const Blog = ({ posts, currentPage, numPages }) => {
             <PageButtons currentPage={currentPage} numPages={numPages} />
           </div>
         </Container>
-      </section>
+      </div>
       <Footer />
     </PortfolioProvider>
   );

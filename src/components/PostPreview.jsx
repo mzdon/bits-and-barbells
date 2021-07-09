@@ -27,7 +27,7 @@ const PostPreview = ({ post }) => {
   };
 
   return (
-    <div className="post-preview-wrapper">
+    <div className="post-preview-wrapper mb-5">
       <Row key={id}>
         <Col sm={12} md={{ span: 4, order: 'last' }}>
           <Fade right={isDesktop} bottom={isMobile} delay={250}>
