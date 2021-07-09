@@ -1,12 +1,6 @@
 #about {
   @include purple-top-section;
 
-  @include respond(tab-land) {
-    height: 100%;
-    -webkit-clip-path: none;
-    clip-path: none;
-  }
-
   .about-wrapper {
     @include respond(phone) {
       padding-bottom: 5rem;

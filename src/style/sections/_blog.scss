@@ -11,6 +11,7 @@
   }
 
   .blog-body-wrapper {
+    @include after-purple-top-section;
     min-height: 50vh;
   }
 }
