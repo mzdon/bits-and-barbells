@@ -31,7 +31,7 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'bits_barbells.png',
     title: 'Bits & Barbells',
     info: "Well, I put this site together. It wasn't a huge lift.. just a quick React app built with using Gatsby and a hacked up starter template!",
     info2: '',
@@ -40,7 +40,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'incentive.jpg',
     title: 'Incentive: Financial Wellness',
     info: "Incentive is the app I build at eMoney Advisor. It's a React Native app available on iOS and Android. I'm proud of what our team has put together.",
     info2: '',
@@ -49,7 +49,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: '',
     title: 'WodWatch',
     info: "WodWatch is a fitness timer app designed for CrossFit. I never found a free timer app I liked so I've decided to build one myself. It's also built using React Native",
     info2: 'Website and code repo links coming soon!',
@@ -58,7 +58,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: '',
     title: 'MyMacros',
     info: "MyMacros is a macronutrient tracking utility that is intended to be as simple as possible with a minimalistic design and feature set. I've used other apps to help track my macronutrient consumption but I found my experience frustrating or overcrowded with unnecessary features. I used React Native for this one as well.",
     info2: 'Website and code repo links coming soon!',
