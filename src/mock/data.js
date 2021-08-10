@@ -35,7 +35,7 @@ export const projectsData = [
     title: 'Bits & Barbells',
     info: "Well, I put this site together. It wasn't a huge lift.. just a quick React app built with using Gatsby and a hacked up starter template!",
     info2: '',
-    url: 'https://bitsandbarbells.com',
+    url: 'https://www.marczdon.com',
     repo: 'https://github.com/mzdon/bits-and-barbells',
   },
   {
